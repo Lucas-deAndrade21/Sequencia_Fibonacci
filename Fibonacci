@@ -1,0 +1,23 @@
+#sequência de Fibonacci
+def fibonacci(resp):
+    fib_sequencia = []
+    a, b = 0, 1
+    for _ in range(resp):
+        fib_sequencia.append(a)
+        a, b = b, a + b
+    return fib_sequencia
+
+n = int(input('1 - Conferir um número\n9 - Sair\nEscolha uma opção:'))
+#repetição para conferir o número na sequência
+while n != 9:
+    if n == 1:
+        resp = int(input('Digite o número que queira conferir na sequência:'))
+        if resp in fibonacci(resp):
+            print (f'Sim, o número {resp} está na sequência.')
+        else:
+            print(f'Não, o número {resp} não está na sequência.')
+    else:
+        print('Digite uma das opções...')
+
+    print('\n')
+    n = int(input('1 - Conferir um novo número\n9 - Sair\nEscolha uma opção:'))
