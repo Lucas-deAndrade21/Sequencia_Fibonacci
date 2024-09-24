@@ -1,0 +1,6 @@
+faturamento = {'sp': 67836.43, 'rj': 36678.66, 'mg': 29229.88, 'es': 27165.48, 'outros': 19849.53} #declaração do dicionário
+total = float(sum(faturamento.values())) #total faturado no mês
+
+#repetição para mostrar os estados + porcentagem comparada ao total
+for chaves, valores in faturamento.items():
+    print(f'{chaves.upper()}: {round(valores * 100 / total, 2)}%')
