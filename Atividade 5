@@ -1,0 +1,7 @@
+txt = 'lucas'
+reverço = ''
+
+for i in range(len(txt) -1, -1, -1):
+    reverço += txt[i]
+
+print(reverço)
